@@ -8,17 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
 @RequestMapping("/app/java-parallel-programming")
-public class TestController {
+public class CompletableFutures {
 
     public static Random RANDOM_INTEGER = new Random();
 
-    @GetMapping("/random-delays")
+    @GetMapping("/completable-futures")
     public List<Integer> getRandomDelays() {
 
         int tasks = RANDOM_INTEGER.nextInt(5);
