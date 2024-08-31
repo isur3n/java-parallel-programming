@@ -12,15 +12,13 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
-@RequestMapping("/app/java-parallel-programming")
+@RequestMapping("${api.root.uri}")
 public class CompletableFutures {
-
-    public static Random RANDOM_INTEGER = new Random();
 
     @GetMapping("/completable-futures")
     public List<Integer> getRandomDelays() {
 
-        int tasks = RANDOM_INTEGER.nextInt(5);
+        int tasks = RandomDelay.RANDOM_INTEGER.nextInt(5);
         log.info("Number of tasks - {}", tasks);
 
         List<CompletableFuture<Integer>> futures = new ArrayList<>();
