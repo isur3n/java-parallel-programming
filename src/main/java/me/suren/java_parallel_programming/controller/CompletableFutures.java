@@ -31,9 +31,4 @@ public class CompletableFutures {
                 .map(RandomDelay.getDelayValue)
                 .collect(Collectors.toList());
     }
-
-    @GetMapping("/health")
-    public Map getHealth() {
-        return Map.of("status", "running");
-    }
 }
