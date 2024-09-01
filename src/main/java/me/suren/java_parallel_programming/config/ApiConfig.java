@@ -13,7 +13,6 @@ import java.util.concurrent.Executors;
 public class ApiConfig {
 
     @Bean
-    @Qualifier("virtualThread")
     public ExecutorService virtualThreadExecutor() {
         return Executors.newVirtualThreadPerTaskExecutor();
     }

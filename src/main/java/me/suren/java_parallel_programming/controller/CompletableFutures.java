@@ -21,7 +21,7 @@ public class CompletableFutures {
     private ExecutorService executorService;
 
     public CompletableFutures(
-            @Qualifier("virtualThread") @Autowired(required = false)
+            @Autowired(required = false)
             ExecutorService executorService) {
         this.executorService = executorService;
         log.info("Virtual thread executor service available - {}", executorService != null);
