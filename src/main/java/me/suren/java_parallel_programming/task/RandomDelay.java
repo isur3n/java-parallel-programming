@@ -15,7 +15,7 @@ public class RandomDelay {
 
     public static Supplier<Integer> task = () -> {
 
-        int delay = RANDOM_INTEGER.nextInt(4999);
+        int delay = RANDOM_INTEGER.nextInt(1000);
         log.info("Sleeping for {} ms", delay);
         try {
             Thread.sleep(delay);
