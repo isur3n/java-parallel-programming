@@ -13,6 +13,16 @@ java {
 	}
 }
 
+jar {
+	manifest {
+		attributes 'Main-Class': 'me.suren.java_parallel_programming.Main'
+	}
+}
+
+compileJava {
+	options.compilerArgs << '--enable-preview'
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
@@ -21,12 +31,6 @@ configurations {
 
 repositories {
 	mavenCentral()
-}
-
-jar {
-	manifest {
-		attributes 'Main-Class': 'me.suren.java_parallel_programming.Main'
-	}
 }
 
 dependencies {
